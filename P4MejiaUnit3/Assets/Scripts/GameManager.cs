@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using UnityEngine;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -16,6 +18,11 @@ public class GameManager : MonoBehaviour
 
         playerControllerScript.gameOver = true;
         StartCoroutine(PlayIntro());
+    }
+
+    private string PlayIntro()
+    {
+        throw new NotImplementedException();
     }
 
     // Update is called once per frame
