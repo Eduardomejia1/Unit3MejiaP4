@@ -26,13 +26,16 @@ public class GameManager : MonoBehaviour
     {
         if (!playerControllerScript.gameOver)
         {
-            score += 2;
+            if (playerControllerScript.doubleSpeed)
+            {
+                score += 2;
+            }
+            else
+            {
+                score++;
+            }
+            Debug.Log("Score: " + score);
         }
-        else
-        {
-            score++;
-        }
-        Debug.Log("Score: " + score);
     }
     IEnumerator PlayIntro()
     {
